@@ -1,0 +1,366 @@
+# Appalachia
+colonial_appalachia = {
+	color = { 192 39 39 }
+
+	provinces = {
+		922 923 924 925 926 927 928 929 930 931 932 933 934 935 936 937 938 939 940 941
+		949 950 951 952 953
+		2011
+		2526 2527
+		2531 2532 2533 2534 2535 2536 2537 2538 2539 2540 2541 2542 2543 2544 2545 2546 2547 2548 2549 2550 2551 2552 2553 2554
+		4625 4626
+		4877 4878 4879 4880 4881 4882 4883
+		4888 4889
+		4913
+		4921
+	}
+
+	# Specific
+	names = {
+		trigger = {
+			OR = {
+				tag = GBR
+				tag = ENG
+				culture_group = british
+			}
+		}
+		name = "COLONIAL_EASTERN_AMERICA_Virginia"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = GBR
+				tag = ENG
+				culture_group = british
+			}
+		}
+		name = "COLONIAL_APPALACHIA_Carolina"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = FRA
+				culture_group = french
+			}
+		}
+		name = "COLONIAL_EASTERN_AMERICA_Floride"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = SPA
+				tag = CAS
+				tag = ARA
+			}
+		}
+		name = "COLONIAL_EASTERN_AMERICA_La_Florida"
+	}
+	names = {
+		name = "COLONIAL_EASTERN_AMERICA_Florida"
+	}
+	names = {
+		trigger = {
+			owns = 953
+		}
+		name = "PROV953" # Conoy
+	}
+	names = {
+		trigger = {
+			owns = 924
+		}
+		name = "PROV924" # Alabama
+	}
+	#Generic
+	names = {
+		name = "COLONIAL_APPALACHIA_Root_Culture_GetName_Southland"
+	}
+	names = {
+		name = "COLONIAL_APPALACHIA_Root_Culture_GetName_Appalachia"
+	}
+}
+
+# Lesser Antilles
+colonial_lesser_antilles = {
+	color = { 78 202 78 }
+
+	provinces = {
+		491
+		493 494 495 496 497 498 499 500 501 502 1881
+	}
+
+	# Specific
+	names = {
+		trigger = {
+			OR = {
+				tag = GBR
+				tag = ENG
+				culture_group = british
+				culture_group = gaelic
+			}
+			calc_true_if = {
+				owns = 493 # St. Thomas
+				owns = 1881 # St. Martin
+				owns = 494 # St. Kitts
+				owns = 495 # Antigua
+				owns = 496 # Guadelupe
+				owns = 497 # Dominica
+				amount = 3
+			}
+		}
+		name = "COLONIAL_LESSER_ANTILLES_Leeward_Islands"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = GBR
+				tag = ENG
+				culture_group = british
+				culture_group = gaelic
+			}
+			calc_true_if = {
+				owns = 498 # Martinique
+				owns = 499 # St. Lucia
+				owns = 500 # St. Vincent
+				owns = 501 # Barbados
+				owns = 502 # Trinidad
+				amount = 3
+			}
+		}
+		name = "COLONIAL_LESSER_ANTILLES_Windward_Islands"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = KUR
+				culture_group = germanic
+				culture_group = west_slavic
+				culture_group = baltic
+			}
+		}
+		name = "COLONIAL_LESSER_ANTILLES_New_Courland"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = FRA
+				culture_group = french
+			}
+		}
+		name = "COLONIAL_THE_CARRIBEAN_Antilles"
+	}
+	names = {
+		trigger = {
+			tag = POR
+		}
+		name = "COLONIAL_THE_CARRIBEAN_Caraibas"
+	}
+	names = {
+		trigger = {
+			tag = POR
+		}
+		name = "COLONIAL_THE_CARRIBEAN_Antilhas"
+	}
+	names = { #Latins will be more likely to pick "X Antilles" as a CN name
+		trigger = {
+			OR = {
+				culture_group = iberian
+				culture_group = french
+				culture_group = latin
+			}
+		}
+		name = "COLONIAL_THE_CARRIBEAN_Root_Culture_GetName_Antilles"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_THE_CARRIBEAN_Root_Culture_GetName_West_Indies"
+	}
+	names = {
+		name = "COLONIAL_THE_CARRIBEAN_Root_Culture_GetName_Antilles"
+	}
+	names = {
+		name = "COLONIAL_THE_CARRIBEAN_Root_Culture_GetName_Caribbean"
+	}
+	names = {
+		name = "COLONIAL_THE_CARRIBEAN_West_Indies"
+	}
+	names = {
+		name = "COLONIAL_THE_CARRIBEAN_The_Carribean"
+	}
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
+}
+
+# Maritimes
+colonial_maritimes = {
+	color = { 255 117 162 }
+
+	provinces = {
+		980 981 982 983 984 985 2568 2569 2570 2571 2572 2573 4891 4896
+	}
+
+	names = {
+		trigger = {
+			OR = {
+				tag = FRA
+				culture_group = french
+			}
+		}
+		name = "COLONIAL_CANADA_Acadia"
+	}
+	names = {
+		trigger = {
+			tag = FRA
+			OR = {
+				any_owned_province = {
+					OR = {
+						area = highlands_area
+						area = lowlands_area
+					}
+				}
+				overlord_of = SCO
+				alliance_with = SCO
+			}
+		}
+		name = "COLONIAL_CANADA_Nouvelle_Écosse"
+	}
+	names = {
+		trigger = {
+			culture_group = germanic
+			NOT = {
+				primary_culture = dutch
+				tag = NED
+				tag = HOL
+			}
+		}
+		name = "COLONIAL_MARITIMES_New_Brunswick"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = SCO
+				primary_culture = scottish
+				culture_group = gaelic
+			}
+		}
+		name = "COLONIAL_CANADA_Nova_Scotia"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = GBR
+				tag = ENG
+				culture_group = british
+			}
+		}
+		name = "COLONIAL_CANADA_Newfoundland"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = SCO
+				primary_culture = scottish
+				culture_group = gaelic
+			}
+		}
+		name = "COLONIAL_CANADA_Nouvelle_Ecosse"
+	}
+	names = {
+		trigger = {
+			culture_group = scandinavian
+		}
+		name = "COLONIAL_CANADA_Vinland"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = NED
+				tag = HOL
+				primary_culture = dutch
+			}
+		}
+		name = "COLONIAL_CANADA_Nova_Hollandia"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_CANADA_Newfoundland"
+	}
+	names = {
+		name = "COLONIAL_CANADA_Acadia"
+	}
+	names = {
+		name = "COLONIAL_CANADA_Nova_Scotia"
+	}
+	names = {
+		name = "COLONIAL_MARITIMES_Root_Culture_GetName_Maritimes"
+	}
+}
+
+# Ohio
+colonial_ohio = {
+	color = { 255 201 14 }
+
+	provinces = {
+		946 947 948 2525 4907 #Ohio
+		942 943 2523 2524 4922 #Indiana
+		915 916 917 4903 #Illinois
+		2519 2520 4904 #Southern Illinois
+		944 945 2521 2522 #Michigan
+		910 911 2517 2518 4898 #Lake Superior
+		912 913 914 4899 #Wisconsin
+	}
+
+	# Specific
+	names = {
+		trigger = {
+			OR = {
+				tag = GBR
+				tag = ENG
+			}
+		}
+		name = "COLONIAL_OHIO_Charlotina"
+	}
+	names = {
+		trigger = {
+			owns = 948 # Ohio
+			calc_true_if = {
+				owns = 946 # Wyandot
+				owns = 947 # Erie
+				owns = 2525 # Chillicothe
+				owns = 4907 # Mosopelea
+				amount = 2
+			}
+		}
+		name = "COLONIAL_OHIO_Ohio"
+	}
+	names = {
+		trigger = {
+			OR = {
+				owns = 915 # Illinois
+				owns = 916 # Kaskaskia
+				owns = 917 # Cahokia
+			}
+		}
+		name = "COLONIAL_OHIO_Illinois"
+	}
+	# Generic
+	names = { #Latins will be more likely to pick "X Illinois" as a CN name
+		trigger = {
+			OR = {
+				culture_group = iberian
+				culture_group = french
+				culture_group = latin
+			}
+		}
+		name = "COLONIAL_OHIO_Root_Culture_GetName_Illinois"
+	}
+	names = {
+		name = "COLONIAL_LOUISIANA_Root_Culture_GetName_Indiana"
+	}
+	names = {
+		name = "COLONIAL_OHIO_Root_Culture_GetName_Ohio"
+	}
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
+}

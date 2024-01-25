@@ -1,0 +1,68 @@
+country_decisions = {
+
+	investigate_heresy = {
+		potential = {
+			has_dlc = "Emperor"
+			is_papal_controller = yes
+			ai = no
+			NOT = { is_religion_enabled = protestant }
+		}
+		allow = {
+			curia_treasury_size = 500
+			reform_desire = 0.05
+		}
+		effect = {
+			add_reform_desire = -0.05
+			add_reform_desire_scale = 0.5
+			add_curia_treasury = -500
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { reform_desire = 0.8 }
+			}
+			modifier = {
+				factor = 0
+				religion_years = { protestant = 1 }
+			}
+			modifier = {
+				factor = 0
+				NOT = { curia_treasury_size = 500 }
+			}
+		}
+	}
+
+	investigate_heresy = {
+		potential = {
+			has_dlc = "Emperor"
+			is_papal_controller = yes
+			ai = yes
+			NOT = { is_religion_enabled = protestant }
+		}
+		allow = {
+			curia_treasury_size = 500
+			reform_desire = 0.05
+		}
+		effect = {
+			add_reform_desire = -0.05
+			add_reform_desire_scale = 0.5
+			add_curia_treasury = -500
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { reform_desire = 0.8 }
+			}
+			modifier = {
+				factor = 0
+				religion_years = { protestant = 1 }
+			}
+			modifier = {
+				factor = 0
+				NOT = { curia_treasury_size = 500 }
+			}
+		}
+	}
+}

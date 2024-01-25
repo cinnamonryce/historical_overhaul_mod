@@ -1,0 +1,14 @@
+﻿l_english:
+ random_event.EVTDESC2:1 "As time goes by the ties between the our former homeland and the colonies grow weaker. The settlers in [american_province.GetName] barely associate themselves with their ancestral home any more. They now prefer to think of themselves as Yankees, and this sentiment is beginning to spread throughout [american_province.GetAreaName]."
+ random_event.EVTDESC2D:0 "As time goes by the ties between the our former homeland and the colonies grow weaker. The settlers in [platinean_province.GetName] barely associate themselves with their ancestral home any more. They now prefer to think of themselves as Rioplatense, and this sentiment is beginning to spread throughout [platinean_province.GetAreaName]."
+ random_event.EVTDESC2F:0 "As time goes by the ties between the our former homeland and the colonies grow weaker. The settlers in [louisianans_province.GetName] barely associate themselves with their ancestral home any more. They now prefer to think of themselves as Cajuns, and this sentiment is beginning to spread throughout [louisianans_province.GetAreaName]."
+ random_event.EVTDESC2G:0 "As time goes by the ties between the our former homeland and the colonies grow weaker. The settlers in [colombian_province.GetName] barely associate themselves with their ancestral home any more. They now prefer to think of themselves as Colombians, and this sentiment is beginning to spread throughout [colombian_province.GetAreaName]."
+ random_event.EVTDESC2H:0 "As time goes by the ties between the our former homeland and the colonies grow weaker. The settlers in [latino_province.GetName] barely associate themselves with their ancestral home any more. They now prefer to think of themselves as Latinos, and this sentiment is beginning to spread throughout [latino_province.GetAreaName]."
+ random_event.EVTDESC2I:0 "As time goes by the ties between the our former homeland and the colonies grow weaker. The settlers in [dixie_province.GetName] barely associate themselves with their ancestral home any more. They now prefer to think of themselves as Dixie, and this sentiment is beginning to spread throughout [dixie_province.GetAreaName]."
+ 
+ random_event.EVTOPTA2:1 "Embrace Yankee culture."
+ random_event.EVTOPTF2:0 "Embrace Rioplatense culture."
+ random_event.EVTOPTH2:0 "Embrace Cajun culture."
+ random_event.EVTOPTI2:0 "Embrace Colombian culture."
+ random_event.EVTOPTJ2:0 "Embrace Latino culture."
+ random_event.EVTOPTK2:0 "Embrace Dixie culture."

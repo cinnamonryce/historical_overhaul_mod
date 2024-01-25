@@ -1,0 +1,1582 @@
+# Describes how religion is spread to new provinces from
+# Centers of Reformation and the "Propagate Religion" Trading Policy
+
+propagate_religion_policy = {
+	
+	trading_policy = yes # Religion is taken from country using the trading policy.	max_distance is not used.
+
+	map_icon = GFX_religious_conversion_center_trading_policy
+
+	base_conversion_speed = 2.0
+	
+	target_province_weights = {
+	
+		#Will only target provinces within same node
+		#From Scope is country using the trading policy
+		
+		factor = 5
+		
+		modifier = {
+			factor = 0
+			religion = hinduism
+			owner = {
+				mission_completed = mnd_maj_porch_of_mecca
+			}
+		}
+		
+		modifier = {
+			factor = 0
+			owner = {
+				has_country_flag = immunity_against_propogate_religion
+			}
+		}
+		modifier = {
+			factor = 0
+			has_missionary = yes
+		}
+		modifier = {
+			factor = 0
+			is_empty = yes
+		}
+		modifier = {
+			factor = 0
+			has_province_modifier = religious_center
+		}
+		modifier = {
+			factor = 0
+			province_id = 118 # Rome, seat of Papacy
+		}
+		modifier = {
+			factor = 0
+			has_province_modifier = religious_zeal_at_conv
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				religion_group = muslim
+				religion_group = jewish_group
+				religion = orthodox
+				religion = coptic
+			}
+			FROM = {
+				NOT = { has_country_flag = can_propagate_religion_in_abrahamic_provinces }
+			}
+		}
+		modifier = {
+			factor = 0
+			religion_group = christian
+			FROM = {
+				NOT = { has_country_flag = can_propagate_religion_in_abrahamic_provinces }
+				#NOT = { has_government_attribute = can_spread_the_reformation }
+				NOT = { has_reform = reformer_state_reform }
+			}
+		}
+		modifier = {
+			factor = 10
+			religion = catholic
+			FROM = {
+				#has_government_attribute = can_spread_the_reformation
+				has_reform = reformer_state_reform
+			}
+		}
+		modifier = {
+			factor = 0.25
+			has_port = no
+		}
+		modifier = {
+			factor = 1.15
+			has_province_modifier = trading_settlement
+		}
+		modifier = {
+			factor = 1.5
+			has_province_modifier = islamic_missionaries
+		}
+		modifier = {
+			factor = 1.5
+			has_province_modifier = muslim_sailor_community
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				any_neighbor_province = {
+					religion = FROM
+				}
+				has_port = yes
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				religion = FROM
+			}
+		}
+		modifier = {
+			factor = 1.25
+			owner = {
+				religion_group = FROM
+			}
+		}
+	}
+}
+
+
+# Centers of Reformation
+# From Scope is center of Reformation Province
+# Will only target provinces on same continent
+
+catholic_center_of_reformation = {
+	
+	religion = catholic
+
+	map_icon = GFX_religious_conversion_center_protestant
+
+	max_distance = 150.0 # From Center of Reformation center province (default is NDefines::NReligion::MAX_RELIGIOUS_CENTER_SPREAD_DISTANCE).
+	base_conversion_speed = 4
+
+	target_province_weights = {
+		factor = 2
+		
+		modifier = {
+			factor = 0
+			is_empty = yes
+		}
+		modifier = {
+			factor = 0
+			has_missionary = yes
+		}
+		modifier = {
+			factor = 0
+			has_province_modifier = religious_center
+		}
+		modifier = {
+			factor = 0
+			has_province_modifier = religious_zeal_at_conv
+		}
+		modifier = {
+			factor = 0.8
+			religion = protestant
+		}
+		modifier = {
+			factor = 1.5
+			religion = reformed
+		}
+		modifier = {
+			factor = 0
+			religion = orthodox
+		}
+		modifier = {
+			factor = 0
+			religion = coptic
+		}
+		modifier = {
+			factor = 0.02
+			religion = hussite
+		}
+		modifier = {
+			factor = 0.5
+			religion = anglican
+		}
+		modifier = {
+			factor = 0
+			NOT = { religion_group = christian }
+		}
+		modifier = {
+			factor = 0
+			NOT = { owner = { religion_group = christian } }
+		}
+		modifier = {
+			factor = 0
+			NOT = { continent = FROM }
+		}
+		modifier = {
+			factor = 1.3
+			owner = { num_of_cardinals = 1 }
+		}
+		modifier = {
+			factor = 1.3
+			owner = { num_of_cardinals = 2 }
+		}
+		modifier = {
+			factor = 1.3
+			owner = { num_of_cardinals = 3 }
+		}
+		modifier = {
+			factor = 1.3
+			owner = { num_of_cardinals = 4 }
+		}
+		modifier = {
+			factor = 1.3
+			owner = { num_of_cardinals = 5 }
+		}
+		modifier = {
+			factor = 0.75
+			owner = {
+				has_opinion = { who = PAP value = -50 }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			owner = {
+				has_opinion = { who = PAP value = -100 }
+			}
+		}
+		modifier = {
+			factor = 1.25
+			owner = {
+				has_opinion = { who = PAP value = 50 }
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				has_opinion = { who = PAP value = 100 }
+			}
+		}
+		modifier = {
+			factor = 4
+			owner = { religion = catholic }
+		}
+		modifier = {
+			factor = 2
+			culture_group = FROM
+		}
+		modifier = {
+			factor = 6
+			region = FROM
+		}
+		# Merchants bring religion home
+		modifier = {
+			factor = 4
+			owner = {
+				any_active_trade_node = {
+					has_merchant = PREV
+					any_trade_node_member_province = {
+						is_reformation_center = yes
+						religion = catholic
+					}
+				}
+			}
+		}
+		# Targets counter-reformation states more
+		modifier = {
+			factor = 5
+			owner = {
+				has_country_modifier = counter_reformation
+			}
+		}
+		# Religious centers, and adjacent provinces, are safe
+		modifier = {
+			factor = 0.01
+			any_neighbor_province = {
+				has_province_modifier = religious_center
+				NOT = { religion = catholic }
+			}
+		}
+		modifier = {
+			factor = 0.1
+			any_neighbor_province = {
+				any_neighbor_province = {
+					has_province_modifier = religious_center
+					NOT = { religion = catholic }
+				}
+			}
+		}
+		# Holy Orders repel reformers
+		modifier = {
+			factor = 1.5
+			OR = {
+				holy_order = dominican_order
+				holy_order = franciscan_order
+				holy_order = jesuit_order
+			}
+		}
+		# Non-accepted cultures will be more opposed to state religion
+		modifier = {
+			factor = 1.5
+			has_owner_culture = yes
+			owner = { religion = catholic }
+		}
+		modifier = {
+			factor = 5
+			any_neighbor_province = {
+				religion = catholic
+			}
+		}
+		# The emperor will be able to repel/attract protestants based on official religion
+		modifier = {
+			factor = 2
+			owner = {
+				is_emperor = yes
+				religion = catholic
+			}
+		}
+		modifier = {
+			factor = 0.5
+			owner = {
+				is_emperor = yes
+				NOT = { religion = catholic }
+			}
+		}
+		modifier = {
+			factor = 0.1
+			has_state_edict = edict_religion_enforced
+			NOT { owner = { religion = catholic } }
+		}
+		modifier = {
+			factor = 2
+			has_state_edict = edict_religion_enforced
+			owner = { religion = catholic }
+		}
+		# HRE is more resistant to reformation when the Pope is an Imperial Prince
+		modifier = {
+			factor = 0.75
+			is_part_of_hre = yes
+			PAP = { is_part_of_hre = no }
+		}
+		#Misc country circumstances
+		modifier = {
+			factor = 0.25
+			owner = { has_any_disaster = yes }
+		}
+	}
+}
+
+hussite_center_of_reformation = {
+	
+	religion = hussite
+
+	map_icon = GFX_religious_conversion_center_protestant
+
+	max_distance = 150.0 # From Center of Reformation center province (default is NDefines::NReligion::MAX_RELIGIOUS_CENTER_SPREAD_DISTANCE).
+	base_conversion_speed = 3
+
+	target_province_weights = {
+		factor = 2
+		
+		modifier = {
+			factor = 0
+			is_empty = yes
+		}
+		modifier = {
+			factor = 0
+			has_missionary = yes
+		}
+		modifier = {
+			factor = 0
+			province_id = 118 # Rome, seat of Papacy
+		}
+		modifier = {
+			factor = 0
+			has_province_modifier = religious_center
+		}
+		modifier = {
+			factor = 0
+			has_province_modifier = religious_zeal_at_conv
+		}
+		modifier = {
+			factor = 0.1
+			religion = reformed
+		}
+		modifier = {
+			factor = 0.1
+			religion = protestant
+		}
+		modifier = {
+			factor = 0.01
+			religion = hussite
+		}
+		modifier = {
+			factor = 0.01
+			religion = coptic
+		}
+		modifier = {
+			factor = 0
+			NOT = { religion_group = christian }
+		}
+		modifier = {
+			factor = 0.05
+			NOT = { owner = { religion_group = christian } }
+		}
+		modifier = {
+			factor = 0
+			NOT = { continent = FROM }
+		}
+		modifier = {
+			factor = 0.6
+			owner = { num_of_cardinals = 1 }
+		}
+		modifier = {
+			factor = 0.6
+			owner = { num_of_cardinals = 2 }
+		}
+		modifier = {
+			factor = 0.6
+			owner = { num_of_cardinals = 3 }
+		}
+		modifier = {
+			factor = 0.6
+			owner = { num_of_cardinals = 4 }
+		}
+		modifier = {
+			factor = 0.6
+			owner = { num_of_cardinals = 5 }
+		}
+		modifier = {
+			factor = 4
+			any_neighbor_province = {
+				religion = hussite
+			}
+		}
+		modifier = {
+			factor = 2
+			culture_group = FROM
+		}
+		modifier = {
+			factor = 2
+			culture = FROM
+		}
+		#Unhappy provinces will reform
+		modifier = {
+			factor = 1.5
+			unrest = 5
+			NOT = {
+				owner = { religion = hussite }
+			}
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 10
+			NOT = {
+				owner = { religion = hussite }
+			}
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 15
+			NOT = {
+				owner = { religion = hussite }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			has_state_edict = edict_religion_enforced
+		}
+		# HRE is more resistant to reformation when the Pope is an Imperial Prince
+		modifier = {
+			factor = 0.75
+			is_part_of_hre = yes
+			PAP = { is_part_of_hre = yes }
+		}
+		# Cultural/Regional weighting
+		modifier = {
+			factor = 0.01
+			OR = {
+				culture = irish
+				owner = { primary_culture = irish }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				region = carpathia_region
+				region = poland_region
+			}
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				region = british_isles_region
+				region = italy_region
+				region = iberia_region
+			}
+		}
+		#Misc country circumstances
+		modifier = {
+			factor = 0.25
+			owner = { has_any_disaster = yes }
+		}
+	}
+}
+
+anglican_center_of_reformation = {
+	
+	religion = anglican
+
+	map_icon = GFX_religious_conversion_center_protestant
+
+	max_distance = 150.0 # From Center of Reformation center province (default is NDefines::NReligion::MAX_RELIGIOUS_CENTER_SPREAD_DISTANCE).
+	base_conversion_speed = 3
+
+	target_province_weights = {
+		factor = 2
+		
+		modifier = {
+			factor = 0.1
+			NOT = { development = 5 }
+		}
+		modifier = {
+			factor = 0
+			is_empty = yes
+		}
+		modifier = {
+			factor = 0
+			has_missionary = yes
+		}
+		modifier = {
+			factor = 0
+			province_id = 118 # Rome, seat of Papacy
+		}
+		modifier = {
+			factor = 0
+			has_province_modifier = religious_center
+		}
+		modifier = {
+			factor = 0
+			has_province_modifier = religious_zeal_at_conv
+		}
+		modifier = {
+			factor = 0.01
+			religion = reformed
+		}
+		modifier = {
+			factor = 0.01
+			religion = protestant
+		}
+		modifier = {
+			factor = 0.01
+			religion = hussite
+		}
+		modifier = {
+			factor = 0.01
+			religion = coptic
+		}		
+		modifier = {
+			factor = 0.01
+			religion = orthodox
+		}
+		modifier = {
+			factor = 0
+			NOT = { religion_group = christian }
+		}
+		modifier = {
+			factor = 0.05
+			NOT = { owner = { religion_group = christian } }
+		}
+		modifier = {
+			factor = 0
+			NOT = { continent = FROM }
+		}
+		modifier = {
+			factor = 0.6
+			owner = { num_of_cardinals = 1 }
+		}
+		modifier = {
+			factor = 0.6
+			owner = { num_of_cardinals = 2 }
+		}
+		modifier = {
+			factor = 0.6
+			owner = { num_of_cardinals = 3 }
+		}
+		modifier = {
+			factor = 0.6
+			owner = { num_of_cardinals = 4 }
+		}
+		modifier = {
+			factor = 0.6
+			owner = { num_of_cardinals = 5 }
+		}
+		modifier = {
+			factor = 4
+			owner = { religion = anglican }
+		}
+		modifier = {
+			factor = 0
+			NOT = { culture_group = FROM }
+		}
+		modifier = {
+			factor = 0.01
+			NOT = { culture = FROM }
+		}
+		modifier = {
+			factor = 2
+			region = FROM
+		}
+		modifier = {
+			factor = 0.5
+			has_state_edict = edict_religion_enforced
+		}
+		modifier = {
+			factor = 0.1
+			has_owner_culture = no
+		}
+		modifier = {
+			factor = 0.1
+			has_owner_accepted_culture = no
+		}
+		# HRE is more resistant to reformation when the Pope is an Imperial Prince
+		modifier = {
+			factor = 0.75
+			is_part_of_hre = yes
+			PAP = { is_part_of_hre = yes }
+		}
+		# Cultural/Regional weighting
+		modifier = {
+			factor = 0.25
+			OR = {
+				culture = irish
+				owner = { primary_culture = irish }
+			}
+		}
+		modifier = {
+			factor = 2
+			region = british_isles_region
+		}
+		modifier = {
+			factor = 1.5
+			region = france_region
+		}
+		modifier = {
+			factor = 1.25
+			OR = {
+				region = north_german_region
+				region = south_german_region
+			}
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				region = poland_region
+				region = italy_region
+				region = iberia_region
+			}
+		}
+		#Misc country circumstances
+		modifier = {
+			factor = 0.25
+			owner = { has_any_disaster = yes }
+		}
+	}
+}
+
+protestant_center_of_reformation = {
+	
+	religion = protestant
+
+	map_icon = GFX_religious_conversion_center_protestant
+
+	max_distance = 300.0 # From Center of Reformation center province (default is NDefines::NReligion::MAX_RELIGIOUS_CENTER_SPREAD_DISTANCE).
+	base_conversion_speed = 2
+
+	target_province_weights = {
+		factor = 2
+		
+		modifier = {
+			factor = 0.75
+			NOT = { development = 5 }
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { development = 10 }
+		}
+		modifier = {
+			factor = 0.75
+			owner = {
+				num_of_cities = 10
+			}
+			NOT = { 
+				num_of_centers_of_reformation = { 
+					religion = reformed
+					count = 2
+				}
+			}
+		}
+		#Local spread
+		modifier = {
+			factor = 1.6
+			any_neighbor_province = { religion = protestant }
+		}
+		modifier = {
+			factor = 1.2
+			any_province = {
+				culture = PREV
+				religion = protestant
+			}
+		}
+		modifier = {
+			factor = 1.2
+			any_province = {
+				area = PREV
+				religion = protestant
+			}
+		}
+		modifier = {
+			factor = 1.2
+			any_province = {
+				area = PREV
+				any_neighbor_province = {
+					any_province = {
+						area = PREV
+						is_reformation_center = yes
+						religion = protestant
+					}
+				}
+			}
+		}
+		# Merchants bring religion home
+		modifier = {
+			factor = 4
+			owner = {
+				any_active_trade_node = {
+					has_merchant = PREV
+					most_province_trade_power = {
+						religion = protestant
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 4
+			owner = {
+				any_active_trade_node = {
+					has_merchant = PREV
+					any_trade_node_member_province = {
+						is_reformation_center = yes
+						religion = protestant
+					}
+				}
+			}
+		}
+		# Protestants will cross borders
+		modifier = {
+			factor = 1.4
+			owner = { 
+				any_neighbor_country = { religion = protestant }
+			}
+		}
+		# Protestants have boats
+		modifier = {
+			factor = 1.5
+			any_neighbor_province = {
+				is_sea = yes
+				any_neighbor_province = {
+					religion = protestant
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			any_neighbor_province = {
+				is_sea = yes
+				any_neighbor_province = {
+					is_sea = yes
+					any_neighbor_province = {
+						religion = protestant
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			is_empty = yes
+		}
+		modifier = {
+			factor = 0
+			has_missionary = yes
+		}
+		modifier = {
+			factor = 0
+			province_id = 118 # Rome, seat of Papacy
+		}
+		modifier = {
+			factor = 0
+			has_province_modifier = religious_center
+		}
+		modifier = {
+			factor = 0
+			has_province_modifier = religious_zeal_at_conv
+		}
+		modifier = {
+			factor = 0.01
+			religion = reformed
+		}
+		modifier = {
+			factor = 0.01
+			religion = anglican
+		}
+		modifier = {
+			factor = 0.01
+			religion = hussite
+		}
+		modifier = {
+			factor = 0.01
+			religion = coptic
+		}
+		modifier = {
+			factor = 0.01
+			religion = orthodox
+		}
+		modifier = {
+			factor = 0
+			NOT = { religion_group = christian }
+		}
+		modifier = {
+			factor = 0.05
+			NOT = { owner = { religion_group = christian } }
+		}
+		modifier = {
+			factor = 0
+			NOT = { continent = FROM }
+		}
+		modifier = {
+			factor = 0.7
+			owner = { num_of_cardinals = 1 }
+		}
+		modifier = {
+			factor = 0.7
+			owner = { num_of_cardinals = 2 }
+		}
+		modifier = {
+			factor = 0.7
+			owner = { num_of_cardinals = 3 }
+		}
+		modifier = {
+			factor = 0.7
+			owner = { num_of_cardinals = 4 }
+		}
+		modifier = {
+			factor = 0.7
+			owner = { num_of_cardinals = 5 }
+		}
+		modifier = {
+			factor = 1.3
+			culture_group = FROM
+		}
+		modifier = {
+			factor = 1.2
+			development = 15
+			NOT = { 
+				num_of_centers_of_reformation = { 
+					religion = protestant
+					count = 2 
+				}
+			}
+		}
+		# Reformation will spread to regions with CoR and adjacent regions
+		modifier = {
+			factor = 1.4
+			region = FROM
+		}
+		modifier = {
+			factor = 1.3
+			any_province = {
+				region = PREV
+				is_reformation_center = yes
+				religion = protestant
+			}
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { 
+				any_province = {
+					region = PREV
+					is_reformation_center = yes
+					religion = protestant
+				}
+			}
+			any_province = {
+				any_neighbor_province = {
+					any_province = {
+						region = PREV
+						is_reformation_center = yes
+						religion = protestant
+					}
+				}
+			}
+		}
+		# Holy Orders repel reformers
+		modifier = {
+			factor = 0.75
+			OR = {
+				holy_order = dominican_order
+				holy_order = franciscan_order
+				holy_order = jesuit_order
+			}
+		}
+		modifier = {
+			factor = 0.25
+			owner = {
+				has_country_modifier = the_societas_jesu
+			}
+		}
+		# Non-accepted cultures will be more opposed to state religion
+		modifier = {
+			factor = 1.5
+			has_owner_culture = yes
+			owner = { religion = protestant }
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_owner_accepted_culture = no
+				AND = {
+					has_owner_culture = yes
+					owner = { ruler_is_foreigner = yes }
+				}
+			}
+			NOT = { owner = { religion = protestant } }
+		}
+		#Unhappy provinces will reform
+		modifier = {
+			factor = 1.5
+			unrest = 5
+			NOT = { owner = { religion = protestant } }
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 10
+			NOT = { owner = { religion = protestant } }
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 15
+			NOT = { owner = { religion = protestant } }
+		}
+		# Preferential targeting to northern/eastern europe
+		modifier = {
+			factor = 0.75
+			OR = {
+				has_winter = mild_winter
+				has_winter = severe_winter
+			}
+		}
+		# Preferential targeting to northern/eastern europe
+		modifier = {
+			factor = 1.5
+			has_winter = normal_winter
+		}
+		# The emperor will be able to repel/attract protestants based on official religion
+		modifier = {
+			factor = 0.9
+			owner = {
+				is_emperor = yes
+				religion = catholic
+			}
+		}
+		modifier = {
+			factor = 1.1
+			owner = {
+				is_emperor = yes
+				religion = protestant
+			}
+		}
+		# Theocracies can crack down on reformers more easily, cities and trade hubs do worse
+		modifier = {
+			factor = 0.6
+			owner = {
+				government = theocracy
+				NOT = { religion = protestant }
+			}
+		}
+		modifier = {
+			factor = 1.1
+			owner = { government = republic }
+		}
+		modifier = {
+			factor = 1.2
+			province_trade_power = 10
+		}
+		modifier = {
+			factor = 1.2
+			province_trade_power = 20
+		}
+		# Renaissance ideas convince people to reform
+		modifier = {
+			factor = 2
+			OR = {
+				owner = {
+					has_institution = renaissance
+				}
+				AND = {
+					owner = {
+						has_unembraced_institution = renaissance
+						has_institution = feudalism
+					}
+					current_institution = 100
+				}
+			}
+		}
+		# Reformation will target provinces far from Rome
+		modifier = {
+			factor = 0.5
+			owner = {
+				NOT = {
+					capital_distance = {
+						who = PAP
+						distance = 50
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 1.2
+			owner = {
+				capital_distance = {
+					who = PAP
+					distance = 250
+				}
+			}
+		}
+		modifier = {
+			factor = 1.3
+			owner = {
+				capital_distance = {
+					who = PAP
+					distance = 250
+				}
+			}
+		}
+		modifier = {
+			factor = 1.4
+			owner = {
+				capital_distance = {
+					who = PAP
+					distance = 350
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				capital_distance = {
+					who = PAP
+					distance = 450
+				}
+			}
+		}
+		modifier = {
+			factor = 1.2
+			any_neighbor_province = {
+				religion = hussite
+			}
+		}
+		# Countries angry with the pope, or HRE members angry with the catholic emperor, will reform
+		modifier = {
+			factor = 1.2
+			is_part_of_hre = yes
+			owner = {
+				OR = {
+					ai_attitude = {
+						who = emperor
+						attitude = attitude_hostile
+					}
+					ai_attitude = {
+						who = emperor
+						attitude = attitude_outraged
+					}
+					ai_attitude = {
+						who = emperor
+						attitude = attitude_rivalry
+					}
+				}
+				emperor = { religion = catholic }
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				OR = {
+					ai_attitude = {
+						who = PAP
+						attitude = attitude_hostile
+					}
+					ai_attitude = {
+						who = PAP
+						attitude = attitude_outraged
+					}
+					ai_attitude = {
+						who = PAP
+						attitude = attitude_rivalry
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			has_state_edict = edict_religion_enforced
+		}
+		# HRE is more resistant to reformation when the Pope is an Imperial Prince
+		modifier = {
+			factor = 0.75
+			is_part_of_hre = yes
+			PAP = {
+				is_part_of_hre = yes
+			}
+		}
+		# Cultural/Regional weighting
+		modifier = {
+			factor = 1.25
+			OR = {
+				culture_group = germanic
+			}
+			factor = 0.01
+			OR = {
+				culture = irish
+				owner = { primary_culture = irish }
+			}
+		}
+		modifier = {
+			factor = 1.25
+			OR = {
+				region = north_german_region
+				region = scandinavia_region
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				region = carpathia_region
+				region = low_countries_region
+			}
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				region = british_isles_region
+				region = poland_region
+				region = italy_region
+				region = france_region
+			}
+		}
+		#Misc country circumstances
+		modifier = {
+			factor = 0.25
+			owner = { has_any_disaster = yes }
+		}
+	}
+}
+
+reformed_center_of_reformation = {
+
+	religion = reformed
+	
+	map_icon = GFX_religious_conversion_center_protestant
+
+	max_distance = 500.0 # From Center of Reformation center province (default is NDefines::NReligion::MAX_RELIGIOUS_CENTER_SPREAD_DISTANCE).
+	base_conversion_speed = 2
+
+	target_province_weights = {
+		factor = 2
+		
+		modifier = {
+			factor = 0.5
+			NOT = { development = 5 }
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { development = 10 }
+		}
+		modifier = {
+			factor = 1.5
+			development = 10
+			owner = {
+				government = republic
+			}
+			NOT = { num_of_centers_of_reformation = { religion = reformed count = 2 } }
+		}
+		modifier = {
+			factor = 0
+			has_missionary = yes
+		}
+		modifier = {
+			factor = 0
+			is_empty = yes
+		}
+		# Local spread
+		modifier = {
+			factor = 1.4
+			any_province = {
+				culture = PREV
+				religion = reformed
+			}
+		}
+		modifier = {
+			factor = 1.4
+			any_province = {
+				area = PREV
+				religion = reformed
+			}
+		}
+		# Merchants bring religion home
+		modifier = {
+			factor = 4
+			owner = {
+				any_active_trade_node = {
+					has_merchant = PREV
+					most_province_trade_power = {
+						religion = reformed
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 4
+			owner = {
+				any_active_trade_node = {
+					has_merchant = PREV
+					any_trade_node_member_province = {
+						is_reformation_center = yes
+						religion = reformed
+					}
+				}
+			}
+		}
+		# Will avoid regions with protestant CoR
+		modifier = {
+			factor = 0.8
+			any_province = {
+				region = PREV
+				is_reformation_center = yes
+				religion = protestant
+			}
+		}
+		modifier = {
+			factor = 0
+			province_id = 118 # Rome, seat of Papacy
+		}
+		modifier = {
+			factor = 0
+			has_province_modifier = religious_center
+		}
+		modifier = {
+			factor = 0
+			has_province_modifier = religious_zeal_at_conv
+		}
+		modifier = {
+			factor = 0.01
+			religion = protestant
+		}
+		modifier = {
+			factor = 0.25
+			religion = anglican
+		}
+		modifier = {
+			factor = 0.01
+			religion = hussite
+		}
+		modifier = {
+			factor = 0.01
+			religion = coptic
+		}		
+		modifier = {
+			factor = 0.01
+			religion = orthodox
+		}	
+		modifier = {
+			factor = 0
+			NOT = { religion_group = christian }
+		}
+		modifier = {
+			factor = 0.05
+			NOT = { owner = { religion_group = christian } }
+		}
+		modifier = {
+			factor = 0
+			NOT = { continent = FROM }
+		}
+		# Holy Orders repel reformers
+		modifier = {
+			factor = 0.5
+			OR = {
+				holy_order = dominican_order
+				holy_order = franciscan_order
+				holy_order = jesuit_order
+			}
+		}
+		modifier = {
+			factor = 0.25
+			owner = {
+				has_country_modifier = the_societas_jesu
+			}
+		}
+		# Non-accepted cultures will be more opposed to state religion
+		modifier = {
+			factor = 1.5
+			has_owner_culture = yes
+			owner = { religion = reformed }
+		}
+		modifier = {
+			factor = 1.25
+			OR = {
+				has_owner_accepted_culture = no
+				AND = {
+					has_owner_culture = yes
+					owner = { ruler_is_foreigner = yes }
+				}
+			}
+			NOT = { owner = { religion = reformed } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { culture_group = owner }
+		}
+		# Swiss and Lowland countries more likely to reform
+		modifier = {
+			factor = 1.5
+			owner = {
+				culture_group = germanic
+				OR = {
+					is_germanic_but_not_swamp = no
+					is_germanic_but_not_mountains = no
+				}
+			}
+		}
+		# Terrain targeting to historical regions of reformation
+		modifier = {
+			factor = 1.3
+			OR = {
+				has_terrain = mountain
+				has_terrain = highlands
+				has_terrain = hills
+			}
+		}
+		modifier = {
+			factor = 0.75
+			NOT = {
+				has_winter = normal_winter
+				has_winter = severe_winter
+			}
+		}
+		modifier = {
+			factor = 1.25
+			OR = {
+				has_winter = normal_winter
+				has_winter = severe_winter
+			}
+		}
+		# Vassals will be more likely to reform
+		modifier = {
+			factor = 1.2
+			owner = {
+				OR = {
+					is_subject_of_type = vassal
+					is_subject_of_type = march
+					is_subject_of_type = personal_union
+				}
+			}
+		}
+		#Large countries will have to deal with more reformers
+		modifier = {
+			factor = 1.2
+			owner = { is_great_power = yes }
+		}
+		modifier = {
+			factor = 1.2
+			owner = { government_rank = 2 }
+		}
+		modifier = {
+			factor = 1.2
+			owner = { government_rank = 3 }
+		}
+		#Unhappy provinces will reform
+		modifier = {
+			factor = 1.5
+			unrest = 5
+			NOT = { owner = { religion = reformed } }
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 10
+			NOT = { owner = { religion = reformed } }
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 15
+			NOT = { owner = { religion = reformed } }
+		}
+		# Theocracies can crack down on reformers more easily, cities and trade hubs do worse
+		modifier = {
+			factor = 0.5
+			owner = {
+				government = theocracy
+				NOT = { religion = reformed }
+			}
+		}
+		modifier = {
+			factor = 1.2
+			owner = { government = republic }
+		}
+		modifier = {
+			factor = 1.5
+			province_trade_power = 20
+		}
+		# Renaissance ideas convince people to reform
+		modifier = {
+			factor = 2
+			OR = {
+				owner = { has_institution = renaissance }
+				AND = {
+					owner = {
+						has_unembraced_institution = renaissance
+						has_institution = feudalism
+					}
+					current_institution = 100
+				}
+			}
+		}
+		#Avoids OPMs that will immediately convert
+		modifier = {
+			factor = 0.6
+			owner = { NOT = { num_of_cities = 2 } }
+		}
+		# Reformation will target provinces far from Rome
+		modifier = {
+			factor = 0.25
+			owner = {
+				NOT = {
+					capital_distance = {
+						who = PAP
+						distance = 50
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.75
+			owner = {
+				NOT = {
+					capital_distance = {
+						who = PAP
+						distance = 100
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 1.1
+			owner = {
+				capital_distance = {
+					who = PAP
+					distance = 250
+				}
+			}
+		}
+		modifier = {
+			factor = 1.2
+			owner = {
+				capital_distance = {
+					who = PAP
+					distance = 350
+				}
+			}
+		}
+		modifier = {
+			factor = 1.3
+			owner = {
+				capital_distance = {
+					who = PAP
+					distance = 450
+				}
+			}
+		}
+		# Reformed spreads further than protestantism
+		modifier = {
+			factor = 1.2
+			NOT = {
+				any_province = {
+					region = PREV
+					has_province_modifier = religious_center
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			any_neighbor_province = {
+				religion = orthodox
+			}
+		}
+		# Countries angry with the pope, or HRE members angry with the catholic emperor, will reform
+		modifier = {
+			factor = 1.2
+			is_part_of_hre = yes
+			owner = {
+				OR = {
+					ai_attitude = {
+						who = emperor
+						attitude = attitude_hostile
+					}
+					ai_attitude = {
+						who = emperor
+						attitude = attitude_outraged
+					}
+					ai_attitude = {
+						who = emperor
+						attitude = attitude_rivalry
+					}
+				}
+				emperor = { religion = catholic }
+			}
+		}
+		modifier = {
+			factor = 1.2
+			owner = {
+				OR = {
+					ai_attitude = {
+						who = PAP
+						attitude = attitude_hostile
+					}
+					ai_attitude = {
+						who = PAP
+						attitude = attitude_outraged
+					}
+					ai_attitude = {
+						who = PAP
+						attitude = attitude_rivalry
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			has_state_edict = edict_religion_enforced
+		}
+		# HRE is more resistant to reformation when the Pope is an Imperial Prince
+		modifier = {
+			factor = 0.75
+			is_part_of_hre = yes
+			PAP = { is_part_of_hre = yes }
+		}
+		# Cultural/Regional weighting
+		modifier = {
+			factor = 0.05
+			OR = {
+				culture = irish
+				owner = { primary_culture = irish }
+			}
+		}
+		modifier = {
+			factor = 0.05
+			OR = {
+				culture = cosmopolitan_french
+				owner = { primary_culture = cosmopolitan_french }
+			}
+		}
+		modifier = {
+			factor = 0.75
+			region = british_isles_region
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				region = north_german_region
+				region = poland_region
+				region = italy_region
+			}
+		}
+		#Misc country circumstances
+		modifier = {
+			factor = 0.25
+			owner = { has_any_disaster = yes }
+		}
+	}
+}

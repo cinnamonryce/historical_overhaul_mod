@@ -1,0 +1,429 @@
+############################
+### Europe
+############################
+
+germanic = {
+	austrian = {
+		province = { local_missionary_strength = -0.02 }
+	}
+}
+
+british = {
+	dixie = {
+		province = { local_missionary_strength = -0.01 } #Evangelicals
+	}
+}
+
+gaelic	= {
+	irish = {
+		province = { local_missionary_strength = -0.02 }
+	}
+}
+
+iberian	= {
+	castillian = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	mexican = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	platinean = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	leonese = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	aragonese = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	catalan = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	galician = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	portugese = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	brazilian = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	basque = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	colombian = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	latino = {
+		province = { local_missionary_strength = -0.02 }
+	}
+}
+
+french	= {
+	cosmopolitan_french = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	normand = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	wallonian = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	breton = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	aquitaine = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	burgundian = {
+		province = { local_missionary_strength = -0.02 }
+	}
+}
+
+west_slavic = {
+	polish = {
+		province = { local_missionary_strength = -0.02 }
+	}
+}
+
+baltic = {
+	lithuanian = {
+		province = { local_missionary_strength = -0.02 }
+	}
+}
+
+latin = {
+	lombard = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	tuscan = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	sardinian = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	romagnan = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	ligurian = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	venetian = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	neapolitan = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	piedmontese = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	umbrian = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	sicilian = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	maltese = {
+		province = { local_missionary_strength = -0.02 }
+	}
+}
+
+south_slavic = {
+	croatian = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	serbian = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	bulgarian = {
+		province = { local_missionary_strength = -0.02 }
+	}
+}
+
+east_slavic = {
+	russian = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	novgorodian = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	ryazanian = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	byelorussian = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	ruthenian = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	karelian = {
+		province = { local_missionary_strength = -0.02 }
+	}
+}
+
+byzantine = {
+	greek = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	pontic_greek = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	goths = {
+		province = { local_missionary_strength = -0.02 }
+	}
+}
+
+caucasian = {
+	georgian = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	circassian = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	dagestani = {
+		province = { local_missionary_strength = -0.01 }
+	}
+	armenian = {
+		province = { local_missionary_strength = -0.01 }
+	}
+}
+
+carpathian = {
+	romanian = {
+		province = { local_missionary_strength = -0.02 }
+	}
+}
+
+#####################################
+### West African
+#####################################
+
+cushitic = {
+	somali = {
+		province = { local_missionary_strength = -0.01 }
+	}
+	harari = {
+		province = { local_missionary_strength = -0.01 }
+	}
+	afar = {
+		province = { local_missionary_strength = -0.01 }
+	}
+	oromo = {
+		province = { local_missionary_strength = -0.01 }
+	}
+	tigray = {
+		province = { local_missionary_strength = -0.01 }
+	}
+	sidamo = {
+		province = { local_missionary_strength = -0.01 }
+	}
+	amhara = {
+		province = { local_missionary_strength = -0.01 }
+	}
+}
+
+sudanese = {
+	nubian = {
+		province = { local_missionary_strength = -0.01 }
+	}
+}
+
+#####################################
+### Islamosphere
+#####################################
+
+maghrebi = {
+	province = { local_missionary_strength = -0.02 }
+}
+
+turko_semitic = {	
+	turkish = {
+		province = { local_missionary_strength = -0.01 }
+	}
+	al_misr_arabic = { #Egyptian Arab
+		province = { local_missionary_strength = -0.01 }
+	}
+	al_suryah_arabic = { #Syrian Arab
+		province = { local_missionary_strength = -0.01 }
+	}
+	al_iraqiya_arabic = { #Mashriqi Arab
+		province = { local_missionary_strength = -0.01 }
+	}
+	gulf_arabic = {
+		province = { local_missionary_strength = -0.01 }
+	}
+	bedouin_arabic = { #Bedouin Arab
+		province = { local_missionary_strength = -0.01 }
+	}
+	mahri_culture = { #South Arabs
+		province = { local_missionary_strength = -0.01 }
+	}
+	hejazi_culture = {
+		province = { local_missionary_strength = -0.01 }
+	}
+	omani_culture = {
+		province = { local_missionary_strength = -0.01 }
+	}
+	yemeni_culture = {
+		province = { local_missionary_strength = -0.01 }
+	}
+}
+
+iranian	= {
+	persian = {
+		province = { local_missionary_strength = -0.01 }
+	}
+	luri = {
+		province = { local_missionary_strength = -0.01 }
+	}
+	azerbaijani = {
+		province = { local_missionary_strength = -0.01 }
+	}
+	khorasani = {
+		province = { local_missionary_strength = -0.01 }
+	}
+	baluchi = {
+		province = { local_missionary_strength = -0.01 }
+	}
+	afghani= {
+		province = { local_missionary_strength = -0.01 }
+	}
+	kurdish = {
+		province = { local_missionary_strength = -0.01 }
+	}
+	mazandarani = {
+		province = { local_missionary_strength = -0.01 }
+	}
+}
+
+#####################################
+### Asia
+#####################################
+
+east_asian = {	# Chinese Group
+	province = { local_missionary_strength = -0.02 }
+}
+
+korean_g = {	
+	korean = {
+		province = { local_missionary_strength = -0.02 }
+	}
+}
+
+tibetan_group = {
+	province = { local_missionary_strength = -0.02 }
+}
+
+altaic = {
+	mongol = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	chahar = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	khalkha = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	oirats = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	uzbehk = {
+		province = { local_missionary_strength = -0.01 }
+	}
+	turkmeni = {
+		province = { local_missionary_strength = -0.01 }
+	}
+	uyghur = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	khazak = {
+		province = { local_missionary_strength = -0.01 }
+	}
+	kirgiz = {
+		province = { local_missionary_strength = -0.01 }
+	}
+}
+
+burman = {
+	province = { local_missionary_strength = -0.02 }
+}
+
+southeastasian_group = {
+	province = { local_missionary_strength = -0.02 }
+}
+
+thai_group = {
+	province = { local_missionary_strength = -0.02 }
+}
+
+evenks = {
+	manchu = {
+		province = { local_missionary_strength = -0.02 }
+	}
+}
+
+#####################################
+### India
+#####################################
+
+dravidian = {
+	province = { local_missionary_strength = -0.02 }
+}
+
+central_indic = {
+	province = { local_missionary_strength = -0.02 }
+}
+
+eastern_aryan = {
+	assamese = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	kochi = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	bihari = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	pahari = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	nepali = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	oriya = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	sinhala = {
+		province = { local_missionary_strength = -0.02 }
+	}
+}
+
+hindusthani = {
+	avadhi = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	kanauji = { #Hindvi
+		province = { local_missionary_strength = -0.02 }	
+	}
+	vindhyan = { #Bundeli & Bagheli
+		province = { local_missionary_strength = -0.02 }
+	}
+}
+
+western_aryan = {
+	gujarati = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	saurashtri = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	marathi = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	rajput = {
+		province = { local_missionary_strength = -0.02 }
+	}
+	malvi = {
+		province = { local_missionary_strength = -0.02 }
+	}
+}

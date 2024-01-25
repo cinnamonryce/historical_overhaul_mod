@@ -1,0 +1,148 @@
+country_decisions = {
+
+	join_the_counter_reformation = {
+		major = yes
+		potential = {
+			NOT = { has_country_modifier = counter_reformation } 
+			has_global_flag = counter_reformation
+			NOT = { has_idea = ecumenism }
+			NOT = { has_idea = liberty_egalite_fraternity }
+			NOT = { religion_years = { protestant = 150 } }
+			religion = catholic
+		}
+		allow = {
+			OR = {
+				tag = PAP
+				is_emperor = yes
+				has_opinion = { who = PAP value = -50 }
+			}
+			NOT = { has_country_modifier = edict_de_nantes }
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = { tag = PAP }
+				}
+				reverse_add_opinion = { who = PAP modifier = opinion_embraced_counter_reformation }
+			}
+			if = {
+				limit = {
+					is_emperor = no
+					emperor = { religion = catholic }
+				}
+				emperor = { add_opinion = { who = ROOT modifier = opinion_embraced_counter_reformation } }
+			}
+			if = {
+				limit = {
+					religion = catholic
+					OR = {
+						is_emperor = yes
+						tag = PAP
+					}
+					NOT = {
+						calc_true_if = {
+							all_province = {
+								religion = catholic
+								is_reformation_center = yes
+							}
+							amount = 2
+						}
+					}
+				}
+				capital_scope = {
+					if = {
+						limit = {
+							NOT = { religion = catholic }
+						}
+						change_religion = catholic
+						add_permanent_province_modifier = {
+							name = "religious_zeal_at_conv"
+							duration = 9000
+						}
+					}
+					add_reform_center = catholic
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						# somewhat influential kingdom (or empire) rank (e.g., not Navarra or one of the Irish minors)
+						AND = {
+							government_rank = 2
+							total_development = 75 #Up from 50
+						}
+						# influential nation in general
+						total_development = 100
+						# theocracy
+						government = theocracy
+					}
+				}
+				add_reform_desire_scale = -0.25
+			}
+			add_country_modifier = {
+				name = "counter_reformation"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.0
+				dominant_religion = reformed
+				is_emperor = no
+			}
+			modifier = {
+				factor = 0.0
+				dominant_religion = protestant
+				is_emperor = no
+			}
+			modifier = {
+				factor = 0.0
+				has_country_flag = protestant_reformation
+				is_emperor = no
+			}
+			modifier = {
+				factor = 0.0
+				has_country_flag = calvinist_reformation
+				is_emperor = no
+			}
+			modifier = {
+				factor = 0.0
+				NOT = { has_opinion = { who = PAP value = -10 } }
+				NOT = { culture_group = latin }
+				NOT = { culture_group = iberian }
+				is_emperor = no
+			}
+			modifier = {
+				factor = 0.0
+				adm = 2
+				NOT = { has_opinion = { who = PAP value = 100 } }
+				NOT = { culture_group = latin }
+				NOT = { culture_group = iberian }
+				is_emperor = no
+			}
+		}
+	}
+	
+	christian_daimyo = {
+		potential = {
+			has_reform = daimyo
+			religion = shinto
+			NOT = { has_dlc = "Mandate of Heaven" } #Uses incidents instead.
+			any_owned_province = {
+				religion = catholic
+			}
+		}
+		
+		allow = {
+			dominant_religion = catholic
+			stability = 3
+		}
+		
+		effect = {
+			change_religion = catholic
+			add_stability = -4
+		}
+	}
+
+}

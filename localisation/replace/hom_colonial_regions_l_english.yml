@@ -1,0 +1,130 @@
+﻿l_english:
+ #Appalachia
+ colonial_appalachia:0 "Colonial Appalachia"
+ short_colonial_appalachia:0 "Appalachia"
+ COLONIAL_APPALACHIA_Carolina:0 "Carolina"
+ COLONIAL_APPALACHIA_Carolina_ADJ:0 "Carolinian"
+ COLONIAL_EASTERN_AMERICA_La_Florida:0 "La Florida"
+ COLONIAL_EASTERN_AMERICA_La_Florida_ADJ:0 "La Floridian"
+ COLONIAL_APPALACHIA_Root_Culture_GetName_Southland:0 "[Root.GetAdjective] Southland"
+ COLONIAL_APPALACHIA_Root_Culture_GetName_Southland_ADJ:0 "[Root.GetAdjective] Southlander"
+ COLONIAL_APPALACHIA_Root_Culture_GetName_Appalachia:0 "[Root.GetAdjective] Appalachia"
+ COLONIAL_APPALACHIA_Root_Culture_GetName_Appalachia_ADJ:0 "[Root.GetAdjective] Appalachian"
+ 
+ #Brazil
+ COLONIAL_BRAZIL_Santa_Cruz:0 "Santa Cruz"
+ COLONIAL_BRAZIL_Santa_Cruz_ADJ:0 "Santa Cruz"
+ COLONIAL_BRAZIL_Terra_Santa_Croxe:0 "Terra Santa Croxe"
+ COLONIAL_BRAZIL_Terra_Santa_Croxe_ADJ:0 "Santa Croxe"
+ COLONIAL_BRAZIL_Terra_Coigo:0 "Terra Coigo"
+ COLONIAL_BRAZIL_Terra_Coigo_ADJ:0 "Terra Coigo"
+ 
+ #Canada
+ COLONIAL_CANADA_Markland:0 "Markland"
+ COLONIAL_CANADA_Markland_ADJ:0 "Marklander"
+ COLONIAL_CANADA_Quebec:0 "Quebec"
+ COLONIAL_CANADA_Quebec_ADJ:0 "Quebecer"
+ 
+ #Colombia
+ COLONIAL_COLOMBIA_Veneziola:0 "Veneziola"
+ COLONIAL_COLOMBIA_Veneziola_ADJ:0 "Veneziolan"
+ COLONIAL_COLOMBIA_Welserland:0 "Welserland"
+ COLONIAL_COLOMBIA_Welserland_ADJ:0 "Welserlander"
+ COLONIAL_COLOMBIA_Klein_Venedig:0 "Klein Venedig"
+ COLONIAL_COLOMBIA_Klein_Venedig_ADJ:0 "Klein Venedigian"
+ COLONIAL_COLOMBIA_New_Caledonia:0 "New Caledonia"
+ COLONIAL_COLOMBIA_New_Caledonia_ADJ:0 "New Caledonian"
+ COLONIAL_COLOMBIA_Willoughbyland:0 "Willoughbyland"
+ COLONIAL_COLOMBIA_Willoughbyland_ADJ:0 "Willoughbylander"
+ COLONIAL_COLOMBIA_Surinam:0 "Surinam"
+ COLONIAL_COLOMBIA_Surinam_ADJ:0 "Surinamese
+ COLONIAL_COLOMBIA_Root_Culture_GetName_Guiana:0 "[Root.GetAdjective] Guiana"
+ COLONIAL_COLOMBIA_Root_Culture_GetName_Guiana_ADJ:0 "[Root.GetAdjective] Guianan"
+ 
+ #East Coast
+ colonial_eastern_america:0 "Colonial East Coast"
+ short_colonial_eastern_america:0 "East Coast"
+ COLONIAL_EASTERN_AMERICA_New_England:0 "New England"
+ COLONIAL_EASTERN_AMERICA_New_England_ADJ:0 "New Englander"
+ COLONIAL_EASTERN_AMERICA_New_Netherland:0 "New Netherland"
+ COLONIAL_EASTERN_AMERICA_New_Netherland_ADJ:0 "New Netherlander"
+ 
+ #Lesser Antilles
+ colonial_lesser_antilles:0 "Colonial Lesser Antilles"
+ short_colonial_lesser_antilles:0 "Lesser Antilles"
+ COLONIAL_LESSER_ANTILLES_Leeward_Islands:0 "Leeward Islands"
+ COLONIAL_LESSER_ANTILLES_Leeward_Islands_ADJ:0 "Leeward Islander"
+ COLONIAL_LESSER_ANTILLES_Windward_Islands:0 "Windward Islands"
+ COLONIAL_LESSER_ANTILLES_Windward_Islands_ADJ:0 "Windward Islander"
+ COLONIAL_LESSER_ANTILLES_New_Courland:0 "New Courland"
+ COLONIAL_LESSER_ANTILLES_New_Courland_ADJ:0 "New Curonian"
+ 
+ #Greater Antilles
+ colonial_the_carribean:0 "Colonial Greater Antilles"
+ short_colonial_the_carribean:0 "Greater Antilles"
+ COLONIAL_THE_CARRIBEAN_Santo_Domingo:0 "Santo Domingo"
+ COLONIAL_THE_CARRIBEAN_Santo_Domingo_ADJ:0 "Santo Domingo"
+ COLONIAL_THE_CARRIBEAN_Saint_Domingue:0 "Saint-Domingue"
+ COLONIAL_THE_CARRIBEAN_Saint_Domingue_ADJ:0 "Saint-Domingue"
+ COLONIAL_THE_CARRIBEAN_Sao_Domingos:0 "Sao Domingos"
+ COLONIAL_THE_CARRIBEAN_Sao_Domingos_ADJ:0 "Sao Domingos"
+ COLONIAL_THE_CARRIBEAN_Root_Culture_GetName_Hispaniola:0 "[Root.GetAdjective] Hispaniola"
+ COLONIAL_THE_CARRIBEAN_Root_Culture_GetName_Hispaniola_ADJ:0 "[Root.GetAdjective] Hispaniolan"
+ COLONIAL_THE_CARRIBEAN_Root_Culture_GetName_Cuba:0 "[Root.GetAdjective] Cuba"
+ COLONIAL_THE_CARRIBEAN_Root_Culture_GetName_Cuba_ADJ:0 "[Root.GetAdjective] Cuban"
+ COLONIAL_THE_CARRIBEAN_Root_Culture_GetName_Bahamas:0 "[Root.GetAdjective] Bahamas"
+ COLONIAL_THE_CARRIBEAN_Root_Culture_GetName_Bahamas_ADJ:0 "[Root.GetAdjective] Bahaman"
+ COLONIAL_THE_CARRIBEAN_Root_Culture_GetName_Antilles:0 "[Root.GetAdjective] Antilles"
+ COLONIAL_THE_CARRIBEAN_Root_Culture_GetName_Antilles_ADJ:0 "[Root.GetAdjective] Antillean"
+ COLONIAL_THE_CARRIBEAN_Root_Culture_GetName_Caribbean:0 "[Root.GetAdjective] Caribbean"
+ COLONIAL_THE_CARRIBEAN_Root_Culture_GetName_Caribbean:0 "[Root.GetAdjective] Caribbean"
+ 
+ #Great Plains
+ colonial_louisiana:0 "Colonial Great Plains"
+ short_colonial_louisiana:0 "Great Plains"
+ COLONIAL_LOUISIANA_La_Louisiane:0 "La Louisiane"
+ COLONIAL_LOUISIANA_La_Louisiane_ADJ:0 "Louisianais"
+ COLONIAL_LOUISIANA_Root_Culture_GetName_Missouri:0 "[Root.GetAdjective] Missouri"
+ COLONIAL_LOUISIANA_Root_Culture_GetName_Missouri_ADJ:0 "[Root.GetAdjective] Missourian"
+ COLONIAL_LOUISIANA_Root_Culture_GetName_Missouri:0 "[Root.GetAdjective] Midwest"
+ COLONIAL_LOUISIANA_Root_Culture_GetName_Missouri_ADJ:0 "[Root.GetAdjective] Midwestern"
+ 
+ #River Plate
+ colonial_la_plata:0 "Colonial River Plate"
+ short_colonial_la_plata:0 "River Plate"
+ COLONIAL_LA_PLATA_Rio_de_la_Plata:0 "Rio de la Plata"
+ COLONIAL_LA_PLATA_Rio_de_la_Plata_ADJ:0 "Platinean"
+ COLONIAL_LA_PLATA_Root_Culture_GetName_La_Plata:0 "[Root.GetAdjective] River Plate"
+ COLONIAL_LA_PLATA_Root_Culture_GetName_La_Plata_ADJ:0 "[Root.GetAdjective] River Plate"
+ 
+ #The Andes
+ colonial_peru:0 "Colonial Andes"
+ short_colonial_peru:0 "The Andes"
+ COLONIAL_PERU_New_Germania:0 "New Germania"
+ COLONIAL_PERU_New_Germania_ADJ:0 "New Germanian"
+ COLONIAL_PERU_Root_Culture_GetName_Andes:0 "[Root.GetAdjective] Andes"
+ COLONIAL_PERU_Root_Culture_GetName_Andes_ADJ:0 "[Root.GetAdjective] Andean"
+ 
+ #The Maritimes
+ colonial_maritimes:0 "Colonial Maritimes"
+ short_colonial_maritimes:0 "The Maritimes"
+ COLONIAL_MARITIMES_Root_Culture_GetName_Maritimes:0 "[Root.GetAdjective] Maritimes"
+ COLONIAL_MARITIMES_Root_Culture_GetName_Maritimes_ADJ:0 "[Root.GetAdjective] Maritimer"
+ COLONIAL_MARITIMES_New_Brunswick:0 "New Brunswick"
+ COLONIAL_MARITIMES_New_Brunswick_ADJ:0 "New Brunswicker"
+ 
+ #Ohio
+ colonial_ohio:0 "Colonial Ohio"
+ short_colonial_ohio:0 "Ohio"
+ COLONIAL_OHIO_Root_Culture_GetName_Illinois:0 "[Root.GetAdjective] Illinois"
+ COLONIAL_OHIO_Root_Culture_GetName_Illinois_ADJ:0 "[Root.GetAdjective] Illinoian"
+ COLONIAL_OHIO_Root_Culture_GetName_Ohio:0 "[Root.GetAdjective] Ohio"
+ COLONIAL_OHIO_Root_Culture_GetName_Ohio_ADJ:0 "[Root.GetAdjective] Ohioan"
+ COLONIAL_OHIO_Charlotina:0 "Charlotina"
+ COLONIAL_OHIO_Charlotina_ADJ:0 "Charlotinan"
+ COLONIAL_OHIO_Ohio:0 "Ohio Country"
+ COLONIAL_OHIO_Ohio_ADJ:0 "Ohioan"
+ COLONIAL_OHIO_Illinois:0 "Illinois Country"
+ COLONIAL_OHIO_Illinois_ADJ:0 "Illinoian"
+ COLONIAL_LOUISIANA_Root_Culture_GetName_Indiana:0 "[Root.GetAdjective] Indiana"
+ COLONIAL_LOUISIANA_Root_Culture_GetName_Indiana_ADJ:0 "[Root.GetAdjective] Indianan"

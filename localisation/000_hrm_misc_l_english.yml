@@ -1,0 +1,17 @@
+﻿l_english:
+ wants_avoid_ugly_borders:0 ""
+
+ #Siberian Frontier --> Frontier
+ establish_new_siberian_frontier:0 "Extend Frontiers"
+ NOSF_NO_POINTS:0 "You need §Y$COST$§!£dip to establish Frontier, and you only have §Y$VAL$§!."
+ NOSF_HAS_OWNER:1 "You cannot establish a Frontier in a province that is already being colonized." #Condensed
+ NOSF_ALREADY_COLONISED:0 "You cannot establish a Frontier in a province that has already been colonized." #Condensed
+ NOSF_NO_TRACE_HOME:0 "A Frontier can only be established in a province with a traceable land route to our capital." #Rephrased
+ ESTABLISH_SIBFRO_IRO:0 "Establishing a Frontier will cost §Y$COST$§!£dip£. This will create a colony that will slowly grow, without the need for a colonist, nor any colonial maintenance."
+ SIBERIAN_FRONTIER_LACKS_IDEA:0 "We lack the necessary ideas to establish a Frontier." #Condensed
+ NOT_SIB_TO_BE_SEI:0 "Frontiers cannot be seized like normal colonies."
+ SIBERIAN_CONSTRUCTION:0 "constructing a Frontier"
+ SIBHERE:0 "There is a frontier here, so no colonists can be sent!"
+ MODIFIER_MAY_SIBERIAN_FRONTIER:0 "May Establish Frontiers"
+ DLC_dlc072_TOOLTIP_DELAYED:0 "- Tsardoms & Principalities\n- Iconography\n- Metropolitans\n- Special Streltsy units for Russian nations\n- Frontier\n- New Russian Missions"
+ LANDING_dlc072_TEXT:0 "Main Features:\n- Tsardoms and Principalities\n- Iconography\n- Metropolitans\n- Streltsy\n- Frontier"

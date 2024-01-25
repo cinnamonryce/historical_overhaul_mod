@@ -1,0 +1,23 @@
+﻿l_english:
+ COLONIZATION_ARID_TOOLTIP:0 "You need a diplomatic technology level of at least §Y20§W to colonize §Yarid§W provinces."
+ COLONIZATION_ARCTIC_TOOLTIP:0 "You need a diplomatic technology level of at least §Y15§W to colonize §Yarctic§W provinces." 
+ COLONIZATION_AUSTRALIA_TOOLTIP:0 "You need a diplomatic technology level of at least §Y30§W to colonize in §YOceania§W."
+ COLONIZE_OUTSIDE_CR_TOOLTIP:0 "You need a diplomatic technology level of at least §Y20§W to colonize outside your colonial region."
+ 
+ STABILITY_GENERIC_TOOLTIP:0 "You need §Rless than§W §Y10§W corruption £no£ and must have §Rno§W rebels £no£."
+ STABILITY_GENERIC_C_TOOLTIP:0 "You need §Gless than§W §Y10§W corruption £yes£ and must have §Rno§W rebels. £no£"
+ STABILITY_GENERIC_R_TOOLTIP:0 "You need §Rless than§W §Y10§W corruption £no£ and must have §Gno§W rebels £yes£."
+ 
+ STABILITY_MONARCHY_TOOLTIP:0 "You need §Rat least§W §Y50§W legitimacy £no£, §Rless than§W §Y10§W corruption £no£, and must have §Rno§W rebels £no£."
+ STABILITY_MONARCHY_C_TOOLTIP:0 "You need §Rat least§W §Y50§W legitimacy £no£, §Gless than§W §Y10§W corruption £yes£, and must have §Rno§W rebels £no£."
+ STABILITY_MONARCHY_CL_TOOLTIP:0 "You need §Gat least§W §Y50§W legitimacy £yes£, §Gless than§W §Y10§W corruption £yes£, and must have §Rno§W rebels £no£."
+ STABILITY_MONARCHY_CR_TOOLTIP:0 "You need §Rat least§W §Y50§W legitimacy £no£, §Gless than§W §Y10§W corruption £yes£, and must have §Gno§W rebels £yes£."
+ STABILITY_MONARCHY_L_TOOLTIP:0 "You need §Gat least§W §Y50§W legitimacy £yes£, §Rless than§W §Y10§W corruption £no£, and must have §Rno§W rebels £no£."
+ STABILITY_MONARCHY_LR_TOOLTIP:0 "You need §Gat least§W §Y50§W legitimacy £yes£, §Rless than§W §Y10§W corruption £no£, and must have §Gno§W rebels £yes£."
+ STABILITY_MONARCHY_R_TOOLTIP:0 "You need §Rat least§W §Y50§W legitimacy £no£, §Rless than§W §Y10§W corruption £no£, and must have §Gno§W rebels £yes£."
+ 
+ STABILITY_THEOCRACY_TOOLTIP:0 "You need §Rat least§W §Y50§W devotion £no£, §Rless than§W §Y10§W corruption £no£, and must have §Rno§W rebels £no£."
+ 
+ STABILITY_NOMAD_TOOLTIP:0 "You need §Rat least§W §Y50§W horde unity £no£, §Rless than§W §Y10§W corruption £no£, and must have §Rno§W rebels £no£."
+ 
+ STABILITY_CHINA_TOOLTIP:0 "You need §Rat least§W §Y50§W mandate £no£, §Rless than§W §Y10§W corruption £no£, and must have §Rno§W rebels £no£."
